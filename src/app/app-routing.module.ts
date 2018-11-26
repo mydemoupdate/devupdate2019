@@ -1,22 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PagesComponent } from './pages/pages.component';
 
-const routes: Routes = [
-  { path: '',   redirectTo: '/', pathMatch: 'full' },
-  { path: '', loadChildren: './pages/pages.module#PagesModule'},
-  { path: 'admin',loadChildren: './admin/admin.module#AdminModule'},
-];
+const routes: Routes = [];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(
-      routes,
-      {
-        enableTracing: false, // <-- debugging purposes only
-      }
-    )
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
